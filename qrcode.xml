@@ -5,7 +5,7 @@
   <Description>Generate qrcodes using online web tools</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOnAAADnUBiCgbeAAAAwVJREFUOI1VkzFIsg0UhR81QTTUiChBQ8SSKByMiAjMKKEtgyhCaEiahCJQF5cfqVFMRGkomnRoaAmCCgpMnCwI2hIUDJHA0lBBXvT9h0i+Dpzl8sCBe8+VTExMiENDQ/yqWq0SDAbRaDQ8PT3hcrmIxWJMT0+TSCTQarU9tlKpILHb7WI8HiedTqNWq/n8/GRkZITX11ccDgdvb2+43W5SqRQKhQJBEGi32zidTtbX1+kDSKfTeL1ejEYjBwcHALRaLZRKJc1mk26320v1+XzUajWSySQAUgC1Wo3RaESv1/fAra0tnp6eiEajrK6u9uajo6MYjUb6+/sB6KtWq3x+fvaS0+k0GxsbuN1u9Ho9kUiESCQCwN3dHR6PB4BisUij0UCSSqVEmUzGv5qbmyOfz1MoFDg7O6PZbHJ5eUkul/vDdTodJBaLRazX6wwPDyOXy/F4PCSTSQRBwGQyEQqFcDgc7O3tUSqV2NnZ4f7+nkajwcLCAjKtVvufXq/HZrORyWT4+vpie3sbg8HA8fEx3W6XqakpVlZWkEqllMtllEolGo2Gh4cH+jqdDq1WC5VKxenpKQDhcBiPx4PX60WlUuH3+ymVSrRaLfx+P4IgAOByueibnZ1laWkJnU7H+fk5Hx8fNJtNBgcHub29pVKpYLPZuLm5IRQKkc1mOTw8RCqV8v7+juTk5ESUSCR/lrO8vMza2hqbm5sUi0Wurq4YGxvDbDZzdHSEz+dDqVTS39+PNJFIoFAoen58fCSXy7G7u0s+n2dycpJut4sgCMjlcsrlMqlUCrlcTiAQQKrVahEEgf39fcLhMDMzMwBEo1EAPB4PJpOJ6+trBEFAp9Px+vrKwMAAzWbzp8rtdptarfbnUWQyGYuLi2QyGebn53l5ecFutxOLxajX6yQSCb6/v3+q7HQ6SSaTvdTfkvxeJxAIoFQqabVaXFxcYDAYyGazP+D4+LhotVp7NplMYiqVEi0Wi2gwGESr1Sqm02kxGAyKhUJBdDqdYjweF81ms/j8/Cz+DxyIVO9SvQuZAAAAAElFTkSuQmCC</Image>
-  <Url type="text/html" method="GET" template="http://api.qrserver.com/v1/create-qr-code">
+  <Url type="text/html" method="GET" template="https://api.qrserver.com/v1/create-qr-code">
     <Param name="data" value="{searchTerms}" />    
   </Url>
 </OpenSearchDescription>

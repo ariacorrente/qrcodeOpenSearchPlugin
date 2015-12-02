@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+</head>
+  <meta charset="utf-8">
+  <title>OpenSearch plugin installer</title>
+<body>
+<h1>OpenSearch plugin installer</h1>
+<p>Edit the HTML source code adding the URL of the XML file served from a direct
+link with an HTTP connection.</p>
+<script>
+/*
+Where engineURL is the absolute URL to the XML file for the search engine
+plugin.
+*/
+var engineURL = "";
+if (engineURL === "") {
+  alert("You must edit he javascript before usign this page");
+} else {
+  window.external.AddSearchProvider(engineURL);
+  console.log("AddSearchProvider completed.");
+}
+</script>
+</body>
+</html>
+

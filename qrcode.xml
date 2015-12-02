@@ -9,3 +9,4 @@
     <Param name="data" value="{searchTerms}" />    
   </Url>
 </OpenSearchDescription>
+

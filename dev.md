@@ -22,16 +22,17 @@ XML file with a specific MIME and other stuff like that.
 The javascript function have lesser requirements, the XML file must only be
 available from an HTTP connection. I wrote a simple HTML page containing the
 javascript code needed to install the search engine, the only info required
-is a link to the XML file.
+is a link to the XML file. The link must be in absolute format, something like
+`http://my-server.com/my-folder/qrcode.xml`, **not** a relative URL.
 
 This is the procedure:
 
-1. upload `qrcode.XML` somewhere, for example a local web server, a cloud
-  service, an owncloud instance ora a pastbin. The only requirement is a
-  direct link.
-2. edit the javascript in `test/test.html` loading in the variable `engineURL`
-   the direct link
-3. open the file `test/test.html`
-4. When asked confirm the installation of the search plugin. You may need to
-  remove the previous version.
-
+1. upload `qrcode.xml` somewhere, for example a local web server, a cloud
+    service, an owncloud instance ora a pastbin. The only requirement is a
+    direct link. Even easier, use the python's SimpleHTTPServer to create an
+    HTTP server on localhost
+2. open the file `test/test.html` with your browser
+3. put the absolute URL of `qrcode.xml` in the text filed and push the button
+    below
+4. when asked, confirm the installation of the search plugin. You may need to
+    remove the previous version.

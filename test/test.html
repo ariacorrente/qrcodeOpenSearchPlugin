@@ -1,25 +1,58 @@
 <!DOCTYPE html>
 <head>
-</head>
   <meta charset="utf-8">
   <title>OpenSearch plugin installer</title>
+  <style>
+    form  {
+      margin-top: 2em;
+      padding: 1em;
+      background-color: lightgray;
+    }
+    form>* {
+      display: block;
+      margin: 1em;
+    }
+  </style>
+</head>
 <body>
-<h1>OpenSearch plugin installer</h1>
-<p>Edit the HTML source code adding the URL of the XML file served from a direct
-link with an HTTP connection.</p>
-<script>
-/*
-Where engineURL is the absolute URL to the XML file for the search engine
-plugin.
-*/
-var engineURL = "";
-if (engineURL === "") {
-  alert("You must edit he javascript before usign this page");
-} else {
-  window.external.AddSearchProvider(engineURL);
-  console.log("AddSearchProvider completed.");
-}
-</script>
+
+  <h1>OpenSearch plugin installer</h1>
+  <p>Customize the URL in the text input below.</p>
+  <p>The default value is used when serving the XML file through the Python's
+  SimpleHTTPServer with the command:
+  <pre>python -m SimpleHTTPServer 8000</pre>
+  The command must be executed from the root of the git repository.
+  </p>
+
+  <form>
+    <label for="inputUrl">URL of the open search plugin:</label>
+    <input type="text" id="inputUrl" value="http://localhost:8000/qrcode.xml" size="75">
+    <input type="button" id="inputAddSearchProvider" value="Add search provider">
+  </form>
+
+  <script>
+    function addSearchProvider() {
+      var inputUrl,
+        engineUrl;
+
+      inputUrl = document.getElementById("inputUrl");
+      engineUrl = inputUrl.value;
+      console.log("Adding the engine at URL:");
+      console.log(engineUrl);
+
+      if(engineUrl === "") {
+        alert("You must add the URL in the text field");
+      } else {
+        window.external.AddSearchProvider(engineUrl);
+        console.log("AddSearchProvider completed.");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      var button = document.getElementById("inputAddSearchProvider");
+      button.addEventListener("click", addSearchProvider);
+    });
+  </script>
+
 </body>
 </html>
-

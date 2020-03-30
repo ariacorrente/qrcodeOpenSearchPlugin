@@ -19,8 +19,8 @@ provider][1].
 This project is published on the following services:
 
 - [source code repository][2] on GitHub
-- [easy install][3] on Mozilla Addons website
+- [easy install][3] on Mycroft Project
 
 [1]: http://goqr.me/api/doc/create-qr-code
 [2]: https://github.com/ariacorrente/qrcodeOpenSearchPlugin
-[3]: https://addons.mozilla.org/en-US/firefox/addon/qrcode-generator-opensearch
+[3]: https://mycroftproject.com/search-engines.html?name=goqr
